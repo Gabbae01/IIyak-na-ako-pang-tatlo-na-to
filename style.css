@@ -1,0 +1,103 @@
+body {
+    background: radial-gradient(circle, pink, red);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    font-family: Arial, sans-serif;
+    padding: 20px; /* Padding around the edges */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.container {
+    width: 100%; /* Full width of the viewport */
+    max-width: 800px; /* Maximum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+    box-sizing: border-box;
+    background: white; /* Background for visibility */
+    border-radius: 8px; /* Rounded corners */
+}
+
+h1 {
+    color: white;
+    font-size: calc(1.5em + 2vw); /* Responsive font size based on viewport width */
+    margin: 0 0 10px 0; /* Margin bottom */
+    text-align: center; /* Center text alignment */
+    word-wrap: break-word; /* Ensure text wraps within container */
+}
+
+p {
+    color: white;
+    font-size: 1em; /* Adjust as needed */
+    margin: 5px 0; /* Margin around paragraph */
+    text-align: center; /* Center text alignment */
+}
+
+.questionnaire {
+    width: 100%; /* Full width of parent container */
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.question-block {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.question-block label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.options label {
+    display: block;
+    margin: 5px 0;
+}
+
+.output {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%; /* Ensure it fits within container */
+    text-align: center; /* Center text alignment */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: black;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
