@@ -1,103 +1,850 @@
+/* General Styles */
+
 body {
-    background: radial-gradient(circle, pink, red);
-    height: 100vh;
-    margin: 0;
+    background: radial-gradient(circle, #007FFF, #2a52be);
+    margin: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    font-family: Arial, sans-serif;
-    padding: 20px; /* Padding around the edges */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    background-size: cover; /* Ensures the image covers the whole screen */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Keeps the image fixed while scrolling */
+            background-position: center; /* Centers the image */
+            margin: 0; /* Removes default margin */
 }
 
-.container {
-    width: 100%; /* Full width of the viewport */
-    max-width: 800px; /* Maximum width */
+.shesh {
+    padding: 10px;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    width: 100%;
+    max-width: 600px; /* Reduced width for better fit */
+    height: 100px; /* Removed fixed height to allow content to adjust */
+    border-radius: 10px;
+    border: 2.5px outset black;
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    padding: 20px;
-    box-sizing: border-box;
-    background: white; /* Background for visibility */
-    border-radius: 8px; /* Rounded corners */
+    justify-content: center;
+    align-items: center;
+    font-size: 30px; /* Reduced font size for better fit */
+    text-align: center; /* Center text inside the box */
+    box-sizing: border-box; /* Ensure padding is included in total width/height */
+
 }
 
+.background-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Content styles */
 h1 {
     color: white;
-    font-size: calc(1.5em + 2vw); /* Responsive font size based on viewport width */
-    margin: 0 0 10px 0; /* Margin bottom */
-    text-align: center; /* Center text alignment */
-    word-wrap: break-word; /* Ensure text wraps within container */
+    font-size: 36px;
+    position: relative;
+    flex-direction: center;
 }
 
 p {
     color: white;
-    font-size: 1em; /* Adjust as needed */
-    margin: 5px 0; /* Margin around paragraph */
-    text-align: center; /* Center text alignment */
-}
-
-.questionnaire {
-    width: 100%; /* Full width of parent container */
-    max-width: 800px;
-    margin: 0 auto; /* Center the container */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.question-block {
-    margin-bottom: 20px;
+    font-size: 25px;
+    margin: 10px auto;
+    text-align: left;
     padding: 10px;
-    background-color: white;
-    border-radius: 5px;
+}
+
+/* Questionnaire Container */
+.questionnaire {
     width: 100%;
+    max-width: 600px;
+    margin: 0 ;
+    padding: 10px;
+}
+
+/* Question Block Styles */
+.question-block {
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px outset black;
+    background-color: #7ab7d6;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
     box-sizing: border-box;
+    margin-right: 200px;
 }
 
 .question-block label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    font-size: 18px;
 }
 
+/* Options Styles */
 .options label {
     display: block;
-    margin: 5px 0;
+    margin: 5px auto;
+    font-size: 16px;
 }
 
+/* Output Section */
 .output {
-    margin-top: 20px;
     padding: 10px;
     background-color: white;
-    border-radius: 5px;
-    width: 100%; /* Ensure it fits within container */
-    text-align: center; /* Center text alignment */
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Button Styles */
+.button1 {
+        width: auto;
+        height: 50px;
+        margin-bottom: 10px;
+        border: 2px outset white;
+        background-color: #7ab7d6;
+        color: black;
+    }
+
+h2{
+    font-size: 40px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px;
+    font-size: 20px;
     border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    color: black;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 15px;
+    height: 85px;
+    width: 300px;
+    margin-bottom: 25px;
 }
 
 button:hover {
     background-color: #0056b3;
-    color: black;
 }
 
-/* Media Query for Smaller Screens */
-@media (max-width: 600px) {
+/* Specific Component Styles (No Changes) */
+.fat {
+    display: flex;
+    justify-content: center;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    padding: 10px;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.submit-button {
+    width: auto;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 2px outset black;
+    background-color: #7ab7d6;
+    color: black;
+    flex-direction: row;
+}
+
+.ewan {
+    color: white;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    width: 1300px ;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    border-radius: 15px;
+    padding: 20px; /* Adjust padding as needed */
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: flex-start; /* Center-align text */
+    justify-content: space-around;
+}
+
+.ewan h2 {
+    font-size: 28px; /* Adjust title font size */
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between title and description */
+}
+
+.ewan p {
+    font-size: 20px; /* Adjust description font size */
+    line-height: 1.5; /* Improve readability */
+}
+
+
+.burat1{
+    margin-top: 100px;
+}
+
+/* Burat classes (No changes) */
+ .shesh {
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: 15px 10px;
+    width: 100%;
+    max-width: 600px;
+    font-size: 25px;
+    justify-content: center;
+}
+
+/* Navigation (No changes) */
+.navigation {
+    margin: 10px;
+    padding: 5px;
+    border: 2px outset white;
+    width: 170px;
+    height: 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #7ab7d6;
+    margin-top: 80px;
+    text-align: center;
+    color: black;
+    margin-left: 40px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
     h1 {
-        font-size: 1.5em; /* Adjust font size for smaller screens */
+        font-size: 28px;
     }
 
-    .container {
-        padding: 10px; /* Adjust padding for smaller screens */
+    p {
+        font-size: 16px;
+    }
+
+    .question-block, .output, .fat, .ewan, .burat1, .burat2, .burat3, .navigation {
+        width: 100%;
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    button, .button1 {
+        font-size: 16px;
+        padding: 6px 12px;
+        width: 100%;
+    }
+
+    .shesh {
+        font-size: 32px;
+    }
+}
+
+.frequency-box {
+    border: 2px outset black;
+    padding: 15px;
+    margin: 10px;
+    background-color: #7ab7d6;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    hyphens: none;
+    white-space: nowrap;
+    max-width: 650px;
+    width: 100%;
+}
+
+.tips-box {
+    border: 2px outset black;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #7ab7d6;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    font-size: 30px;
+    width: 100%px;
+    height: auto;
+    hyphens: none;
+    max-width: 1200px;
+}
+
+.bungot {
+    border: 2px outset black;
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #7ab7d6;
+    border-radius: 8px;
+    font-size: 18px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    width: 100%px;
+    height: 90px;
+    max-width: 600px;
+}
+
+.learner-types-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Spread items evenly */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px; /* Container width */
+    gap: 20px; /* Space between items */
+    margin: auto;
+}
+
+.body-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns to the left */
+    align-items: center;
+    margin-right: 830px;
+    padding: 10px, 5px,;
+}
+.youtube{
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-direction: column;
+    display: inline-flex;
+    border-radius: 10px;
+    align-items: left;
+    justify-content: flex-start;
+}
+.youtube a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.youtube a:hover {
+    color: #333;
+}
+.home-button a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.icon-house {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-color: #4CAF50;
+    clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
+    margin-bottom: 5px;
+}
+
+/* Door for the house */
+.icon-house::before {
+    content: '';
+    width: 10px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.home-button span {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.test-button {
+    position: absolute;
+    bottom: -800px; /* Distance from the bottom of the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.test-button a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 100px;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    margin-top: 1000px;
+}
+
+.icon-clipboard {
+    width: 40px;
+    height: 50px;
+    position: relative;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.icon-clipboard::before {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Checkmark inside the clipboard */
+.icon-clipboard::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    width: 15px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.test-button span {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: -35px;
+}
+.animal{
+    flex-direction: column;
+    align-items: center;
+    text-align: flex-start;
+    justify-content: space-around;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: slide up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease-out forwards;
+    visibility: hidden; /* Avoids occupying space until visible */
+}
+
+.fade-in.visible {
+    opacity: 1;
+    visibility: visible; /* Makes it visible once in view */
+}
+/* Roll-in animation */
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px) rotate(-180deg); /* Start rotated and slightly to the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg); /* End in normal position */
+    }
+}
+
+.roll-in {
+    opacity: 0; /* Start hidden */
+    animation: rollIn 3s ease-out forwards;
+    visibility: hidden; /* Avoid layout shift until visible */
+}
+
+.roll-in.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional slide-up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px); /* Optional slide-down effect */
+    }
+}
+
+.fade-scroll {
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Avoid layout shift until visible */
+}
+
+.fade-scroll.fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 1;
+    visibility: visible;
+}
+
+.fade-scroll.fade-out {
+    animation: fadeOut 1.5s ease-out forwards;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.text-with-background {
+    background-image: url('GettyImages-517751240-1024x697.png'); /* Path to your image */
+    background-size: cover;  /* Makes the image cover the entire text area */
+    color: white;  /* Adjust text color for contrast */
+    padding: 20px; /* Adds space around the text */
+    font-size: 2em; /* Adjust font size */
+    text-align: center; /* Centers the text */
+    display: inline-block; /* Keeps the text wrapped within the image bounds */
+}
+
+.overlay-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    color: #ffffff;
+    padding: 20px;
+    max-width: 1200px; /* Maximum width */
+    width: 100%; /* Full width up to max-width */
+    border-radius: 8px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow */
+    text-align: center;
+}
+
+.image{
+    text-align: right;
+    width: 1310px;
+    height: 350px;
+    border-radius: 15px;
+
+}
+.image p{
+    margin-top: 10px;
+    display: table;  
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    float: left;
+}
+
+.burat1 {
+    color: white;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    width: 370px auto;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    border-radius: 15px;
+    padding: 20px; /* Adjust padding as needed */
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: flex-start; /* Center-align text */
+    justify-content: space-around;
+}
+.image2{
+    width: 300px;
+    height: 740px;
+    border-radius: 15px;
+    margin-top: 10px;
+    line-height: 35px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.burat2 {
+    color: white;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    width: 370px;
+    height: 760px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    border-radius: 15px;
+    padding: 20px; /* Adjust padding as needed */
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: flex-start; /* Center-align text */
+    justify-content: space-around;
+    align-self: normal;
+}
+.image3{
+    width: 360px;
+    height: 900px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 55px;
+}
+.burat3 {
+    color: white;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    width: 370px;
+    height: 760px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    border-radius: 15px;
+    padding: 20px; /* Adjust padding as needed */
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: flex-start; /* Center-align text */
+    justify-content: space-around;
+    align-self: normal;
+}
+.image4{
+    width: 360px;
+    height: 900px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 45px;
+}
+
+@media print {
+    /* Hide the print button when printing */
+    #print-button {
+        display: none;
+    }
+}
+
+
+.certificate {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.certificate h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.certificate p {
+    font-size: 18px;
+    color: #555;
+}
+
+.certificate strong {
+    color: #333;
+}
+
+.button-row {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    justify-content: center; /* Center the buttons within the container */
+    gap: 10px; /* Add space between buttons */
+    padding: 0px;
+    width: 300px;
+    margin: auto;
+    height: 60;
+}
+
+.image6{
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 45px;
+}
+
+/* Base styling for tips */
+.visual-tip1, .visual-tip2, .visual-tip3, .visual-tip4, .visual-tip5,
+.visual-tip6, .visual-tip7, .visual-tip8, .visual-tip9, .visual-tip10, .visual-tip11,
+.auditory-tip1, .auditory-tip2, .auditory-tip3, .auditory-tip4, .auditory-tip5,
+.auditory-tip6, .auditory-tip7, .auditory-tip8, .auditory-tip9, .auditory-tip10,
+.auditory-tip11, .auditory-tip12, .auditory-tip13, .auditory-tip14, .auditory-tip15,
+.kinesthetic-tip1, .kinesthetic-tip2, .kinesthetic-tip3, .kinesthetic-tip4, .kinesthetic-tip5,
+.kinesthetic-tip6, .kinesthetic-tip7, .kinesthetic-tip8, .kinesthetic-tip9, .kinesthetic-tip10, .kinesthetic-tip11 {
+    margin: 10px 0;
+    font-size: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Styling for Visual Learning Tips */
+.visual-tip1, .visual-tip2, .visual-tip3, .visual-tip4, .visual-tip5,
+.visual-tip6, .visual-tip7, .visual-tip8, .visual-tip9, .visual-tip10, .visual-tip11 {
+    color: white;
+    background-color: #7ab7d6;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 100%;  /* Ensure the image is responsive */
+    height: auto;     /* Maintain aspect ratio */
+    margin: 10px 0;   /* Space around the image */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between text and image */
+}
+
+/* Container to align text and image side by side */
+.visual-tip-container,
+.auditory-tip-container,
+.kinesthetic-tip-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 15px; /* 15px gap between the image and text */
+}
+
+/* Styling for Visual Learning Tips - Container */
+.visual-tip-container img {
+    max-width: 35%;  /* Image takes up to 35% of container */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for images */
+}
+
+/* Styling for Auditory Learning Tips - Container */
+.auditory-tip-container img {
+    max-width: 35%;  /* Image takes up to 35% of container */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for images */
+}
+
+/* Styling for Kinesthetic Learning Tips - Container */
+.kinesthetic-tip-container img {
+    max-width: 35%;  /* Image takes up to 35% of container */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for images */
+}
+
+/* Adjusted styling for the image in the auditory tips */
+.auditory-tip1, .auditory-tip2, .auditory-tip3, .auditory-tip4, .auditory-tip5,
+.auditory-tip6, .auditory-tip7, .auditory-tip8, .auditory-tip9, .auditory-tip10,
+.auditory-tip11, .auditory-tip12, .auditory-tip13, .auditory-tip14, .auditory-tip15 {
+    color: white;
+    background-color: #7ab7d6;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 100%;  /* Ensure the image is responsive */
+    height: auto;     /* Maintain aspect ratio */
+    margin: 10px 0;   /* Space around the image */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between text and image */
+    font-size: 35px;
+}
+
+/* Styling for Kinesthetic Learning Tips */
+.kinesthetic-tip1, .kinesthetic-tip2, .kinesthetic-tip3, .kinesthetic-tip4, .kinesthetic-tip5,
+.kinesthetic-tip6, .kinesthetic-tip7, .kinesthetic-tip8, .kinesthetic-tip9, .kinesthetic-tip10, .kinesthetic-tip11 {
+    color: white;
+    background-color: #7ab7d6;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 100%;  /* Ensure the image is responsive */
+    height: auto;     /* Maintain aspect ratio */
+    margin: 10px 0;   /* Space around the image */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between text and image */
+    font-size: 35px;
+}
+
+.tip-image {
+    max-width: 100%;  /* Ensure the image is responsive */
+    height: auto;     /* Maintain aspect ratio */
+    margin: 10px 0;   /* Space around the image */
+    float: left;
+    width: 360px;
+    height: 250px;
+}
+
+/* Falling shapes container */
+.falling-shapes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Shapes won't interfere with clicks */
+    overflow: hidden;
+    z-index: -1; /* Places shapes behind all content */
+}
+
+/* Shape styling - Use your own image */
+.falling-shape {
+    position: absolute;
+    width: 30px; /* Set the width of your image */
+    height: 30px; /* Set the height of your image */
+    background-image: url('snow-flake.1024-removebg-preview.png'); /* Replace with your image path */
+    background-size: contain; /* Ensure the image is scaled correctly */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    animation: fall linear infinite;
+    opacity: 1;
+}
+
+/* Falling animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg); /* Start above the viewport and upright */
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* End below the viewport with rotation */
     }
 }

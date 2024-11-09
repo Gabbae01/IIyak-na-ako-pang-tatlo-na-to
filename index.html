@@ -4,270 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Styles Research Output</title>
-    <style>
-        body {
-            background: radial-gradient(circle, pink, red);
-            height: 100vh;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 800px;
-            max-height: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            color: white;
-            font-size: 48px;
-        }
-
-        p {
-            color: white;
-            font-size: 18px;
-            margin: 5px auto;
-        }
-
-        .questionnaire {
-            width: 100%; /* Full width of the parent container */
-            max-width: 800px; /* Optional: Set maximum width */
-            margin: 0 auto; /* Center the container */
-            padding: 20px;
-        }
-
-        .question-block {
-            margin-bottom: 20px; /* Adds vertical space between question blocks */
-            padding: 10px;
-            background-color: white;
-            border-radius: 5px;
-            width: 100%; /* Ensures full width */
-        }
-
-        .question-block label {
-            display: block;
-            margin-bottom: 10px auto;
-            font-weight: bold;
-        }
-
-        .options label {
-            display: block;
-            margin: 5px auto; /* Adds space between checkboxes */
-        }
-
-        .output {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: white;
-            border-radius: 5px;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            margin-top: 20px; /* Added margin to separate button from other elements */
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
 </head>
 <body>
-    <div class="container">
-        <h1>How do you learn best?</h1>
-        <p>Choose the answer which best explains your preference and click the box next to it.</p>
-        <p>Leave blank any question that does not apply.</p>
-        
-        <div class="questionnaire">
-            <h2>Questions</h2>
-            <form id="questionForm">
-                <!-- Question 1 -->
-                <div class="question-block">
-                    <label>Question 1: What is your preferred learning style?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer1" value="1"> Visual</label>
-                        <label><input type="checkbox" name="answer1" value="2"> Auditory</label>
-                        <label><input type="checkbox" name="answer1" value="3"> Reading/Writing</label>
-                        <label><input type="checkbox" name="answer1" value="4"> Kinesthetic</label>
-                    </div>
-                </div>
-                <!-- Question 2 -->
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <!-- Add more questions as needed -->
-                 <!-- Question 3 -->
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <!-- Question 4 -->
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <!-- Question 5 -->
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <!-- Question 6 -->
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <!-- Question 7 -->
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
-                <div class="question-block">
-                    <label>Question 2: How often do you engage in group study sessions?</label>
-                    <div class="options">
-                        <label><input type="checkbox" name="answer2" value="1"> Rarely</label>
-                        <label><input type="checkbox" name="answer2" value="2"> Sometimes</label>
-                        <label><input type="checkbox" name="answer2" value="3"> Often</label>
-                        <label><input type="checkbox" name="answer2" value="4"> Always</label>
-                    </div>
-                </div>
+<!--  
 
-            </form>
+    <div class="background-container">
+    -->
+        <!-- Your content here (like h1, p, etc.) -->
+
+        <div class="fade-in">
+        <div class="fat"> 
+        <h2>LEARN-ENGAGE TOOL</h2>
+    </div>
+</div>
+    <div class="fade-in">
+    <div class="ewan">
+        <div class="image">
+        <img src="VAK-learning-styles.png">
+        <h1>VAK Test: 
+        What type of learner are you?</h1>
+        <p>LearnEngage Tool
+            Curious about how you learn best? Take this VAK (Visual, Auditory, Kinesthetic) quiz 
+            to discover your dominant learning style. Whether you prefer visual aids, listening to 
+            explanations, or hands-on activities, understanding your learning style can help improve
+            the way you absorb information. The VAK model simplifies learning into these three types, 
+            allowing you to see which one plays the biggest role in your learning process. Ready to 
+            discover your learning style and maximize your potential? Let’s get started!</p>
+    </div>
+</div>
+</div>
+
+    <div class="learner-types-container">
+    <div class="burat1">
+        <div class="fade-in">
+            <div class="image2">
+                <img src="visual.png">
+            <h1>Visual learners</h1>
+            <p1>Visual learners benefit from visual aids like pictures, diagrams, and notes, 
+                which can be found in custom course manuals and online resources. Seeing people in action, 
+                such as personal trainers, can also aid learning. Classrooms are ideal environments for 
+                visual learners due to their abundance of visuals.</p1>
+                <br>
+                <br>
+                <br>
         </div>
-        <script>
-            function calculateAverage() {
-                const form = document.getElementById('questionForm');
-                const answers = form.querySelectorAll('input[type="checkbox"]:checked');
-                
-                let total = 0;
-    
-                // Loop through checked answers and sum their values
-                answers.forEach(answer => {
-                    total += parseInt(answer.value, 15);
-                });
-    
-                // Calculate average
-                const average = (answers.length > 0) ? (total / answers.length) : 0;
-    
-                // Display average
-                document.getElementById('averageAnswer').innerText = `Average Answer: ${average.toFixed(2)}`;
-            }
-        </script>
-        
-        <!-- Output Section -->
-        <div class="output">
-            <h2>Average Answer</h2>
-            <p id="averageAnswer"></p>
+    </div>
+</div>
+        <div class="burat2">
+            <div class="fade-in">
+                <div class="image3">
+                    <img src="what-is-auditory-learning-style.png">
+            <h1>Auditory learners</h1>
+            <p1>Auditory learners rely on listening for effective learning, with materials like lectures, podcasts, 
+                and recordings aiding their memory retention. They often ask for assistance and enjoy music, avoiding 
+                the need to search for lyrics.</p1>
+                <br>
+                <br>
+            </div>
+    </div>
+</div>
+        <div class="burat3">
+            <div class="fade-in">
+                <div class="image4">
+                    <img src="66e151027263e0c10c09caa1_66e150f.png">
+            <h1>Kinaesthetic learners</h1>
+            <p1>Kinaesthetic learners prefer hands-on learning, preferring participation over observation. 
+                They are often referred to as 'tactile' and find practical elements easy to grasp. 
+                They may use strategies like flash cards, games, or quizzes for academic assessments.</p1>
         </div>
-        <button onclick="calculateAverage()">Calculate Average</button>
+    </div>
+</div> 
+
+
+
+
+    <div class="test-button">
+        <a href="questions.html" title="Take the Test">
+            <div class="icon-clipboard"></div>
+            <span>Take the Test</span>
+        </a>
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+    <!-- Link to the questions page 
+    <div class="navigation">
+        <a href="questions.html">TAKE THE TEST</a>  This links to questions.html 
+    </div>
+    <div class="body-containier"> -->
+
+     <!--
+    <button onclick="calculateAverageAndTips()">Calculate Average and Show Tips</button> -->
+    
+    <script src="script.js"></script> <!-- Link to your JavaScript -->
 </body>
 </html>

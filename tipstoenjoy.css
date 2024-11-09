@@ -1,0 +1,308 @@
+/* General Styles */
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in total width/height */
+}
+
+body {
+    background: radial-gradient(circle, #007FFF, #2a52be);
+    min-height: 100vh;
+    margin: 0; /* Reset margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    padding: 0 15px; /* Padding for sides instead of margin */
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Let the height adjust based on content */
+}
+
+/* Content styles */
+h1 {
+    color: white;
+    font-size: 28px; /* Adjusted size for mobile compatibility */
+    position: relative; /* Ensure text is above the background */
+    text-align: center; /* Center align */
+}
+
+p {
+    color: white;
+    font-size: 16px; /* Adjusted font size */
+    margin: 10px auto;
+    text-align: center;
+    position: relative; /* Ensure text is above the background */
+}
+
+/* Questionnaire Container */
+.questionnaire {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Question Block Styles */
+.question-block {
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    border-radius: 10px;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+.question-block label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px; /* Adjusted for mobile readability */
+}
+
+/* Options Styles */
+.options label {
+    display: block;
+    margin: 5px auto;
+    font-size: 16px; /* Adjusted font size for mobile compatibility */
+}
+
+/* Output Section */
+.output {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    margin: 10px auto;
+    width: 100%; /* Full width */
+    height: auto;
+}
+
+/* Button Styles */
+.button1 {
+    padding: 10px; /* Increased padding for touch targets */
+    font-size: 16px; /* Adjusted font size */
+    border: none;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+    background-color: #e7f9e7;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%; /* Full width */
+    max-width: 150px; /* Limit width on larger screens */
+    color: black;
+}
+
+button {
+    padding: 10px; /* Increased padding for touch targets */
+    font-size: 18px; /* Adjusted font size */
+    border: none;
+    border-radius: 10px;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%; /* Full width */
+    max-width: 300px; /* Limit width on larger screens */
+    margin-bottom: 25px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific Component Styles */
+.fat {
+    display: flex;
+    justify-content: center;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    align-items: center;
+    width: 100%; /* Full width */
+    max-width: 600px; /* Adjusted max-width */
+    height: 80px; /* Reduced height for better fit */
+    padding-top: 10px;
+    color: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* For intro */
+.ewan {
+    color: white;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    width: 100%; /* Full width */
+    max-width: 600px; /* Adjusted max-width */
+    height: auto; /* Let height adjust with content */
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px; /* Adjusted for mobile readability */
+    margin-bottom: 15px;
+}
+
+.shesh {
+    padding: 10px;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    width: 100%; /* Full width */
+    height: auto; /* Let content adjust */
+    border-radius: 10px;
+    border: 2.5px outset black;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Adjusted font size for better fit */
+    text-align: center; /* Center text */
+    box-sizing: border-box; /* Ensure padding is included in total width/height */
+}
+
+/* Navigation Styles */
+.navigation {
+    margin: 10px auto; /* Centered */
+    padding: 5px; /* Reduced padding */
+    border: 2px outset white;
+    width: 100%; /* Full width */
+    max-width: 170px; /* Limit width */
+    height: auto;
+    font-size: 16px; /* Adjusted font-size */
+    border-radius: 10px;
+    background-color: #7ab7d6;
+    text-align: center;
+    color: white;
+}
+
+/* Tips Container */
+.tipscontainer {
+    padding: 5px; /* Reduced padding */
+    background-color: rgb(48, 200, 247);
+    width: 100%; /* Full width */
+    max-width: 120px; /* Limit width */
+    height: auto; /* Let content adjust */
+    border-radius: 10px;
+    border: 2px outset black;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; /* Center alignment */
+    align-items: center; /* Center alignment */
+    font-size: 14px; /* Adjusted font-size for readability */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px; /* Adjusted for smaller screens */
+    }
+
+    p {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .question-block, .output, .fat, .ewan, .shesh, .navigation, .tipscontainer, .button1 {
+        width: 100%; /* Full width for mobile */
+        padding: 5px;
+    }
+
+    button {
+        font-size: 18px; /* Adjusted font size */
+        padding: 10px; /* Touch-friendly size */
+    }
+
+    .shesh {
+        font-size: 24px; /* Reduced font size for better fit */
+    }
+}
+
+/* Additional Styles */
+.burat {
+    padding: 10px;
+    border: 2px outset black;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    margin: 10px auto;
+    width: 100%; /* Full width */
+    height: auto; /* Let height adjust */
+}
+
+.burat1,
+.burat2,
+.burat3 {
+    padding: 10px;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%; /* Full width */
+    height: auto; /* Let height adjust */
+    font-size: 20px; /* Adjusted font size */
+}
+
+.tipstoenjoy {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    margin: 10px auto; /* Centered */
+    width: 100%; /* Full width */
+    max-width: 500px; /* Limit width */
+}
+
+.frequency-box {
+    border: 2px outset white;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #7ab7d6;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    hyphens: none;
+    white-space: nowrap;
+}
+
+.tips-box {
+    border: 2px outset white;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #7ab7d6;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    width: 100%; /* Full width */
+    height: auto; /* Let height adjust */
+}
+
+.bungot {
+    border: 2px outset white;
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #7ab7d6;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%; /* Full width */
+    height: auto; /* Let height adjust */
+}
