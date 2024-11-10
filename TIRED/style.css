@@ -1,13 +1,13 @@
 /* General Styles */
 
 body {
-    background: radial-gradient(circle,	#b2cbde, #2a52be);
+    background-color: #b2cbde;
+    background: (#b2cbde, #2a52be);
     margin: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    font-family:'Courier New', Courier, monospace;
     overflow-x: hidden; /* Prevent horizontal overflow */
     background-size: cover; /* Ensures the image covers the whole screen */
             background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -106,6 +106,7 @@ p {
     font-size: 30px; /* Reduced font size for better fit */
     text-align: center; /* Center text inside the box */
     gap: 15px;
+    justify-content: center;
 }
 
 .shesh1 h2{
@@ -225,17 +226,21 @@ button:hover {
     background-color: #98bad5;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     height: 80px;
-    padding: 10px;
+    padding: 30px;
     color: white;
-    box-sizing: border-box;
     border-radius: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 520px;
+}
+
+.fat h2{
+    font-size: 100px;
 }
 
 .submit-button {
@@ -254,7 +259,7 @@ button:hover {
     font-family: 'Courier New', Courier, monospace;
     background-color: #98bad5;
     width: 1300px ;
-    height: auto;
+    height: 400px;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
@@ -268,20 +273,20 @@ button:hover {
 }
 
 .ewan h2 {
-    font-size: 28px; /* Adjust title font size */
+    font-size: 37px; /* Adjust title font size */
     font-weight: bold;
     margin-bottom: 10px; /* Space between title and description */
+    margin-top: -0;
 }
 
 .ewan h1{
     color: black;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .ewan p {
-    font-size: 20px; /* Adjust description font size */
+    font-size: 25px; /* Adjust description font size */
     line-height: 1.5; /* Improve readability */
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 
@@ -319,33 +324,6 @@ button:hover {
     margin-left: 40px;
 }
 
-/* Responsive Styles */
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .question-block, .output, .fat, .ewan, .burat1, .burat2, .burat3, .navigation {
-        width: 100%;
-        max-width: 100%;
-        padding: 5px;
-    }
-
-    button, .button1 {
-        font-size: 16px;
-        padding: 6px 12px;
-        width: 100%;
-    }
-
-    .shesh {
-        font-size: 32px;
-    }
-}
-
 .frequency-box {
     border: 2px outset black;
     padding: 15px;
@@ -369,13 +347,15 @@ button:hover {
     background-color: #7ab7d6;
     border-radius: 8px;
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     color: black;
     hyphens: none;
     white-space: nowrap;
     max-width: 650px;
     width: 41%;
+    width: 760px;
+    align-items: center;
 }
 
 
@@ -406,9 +386,8 @@ button:hover {
     color: black;
     align-items: center;
     justify-content: center;
-    width: 100%px;
+    width: 670px;
     height: 90px;
-    max-width: 600px;
 }
 
 .bungot h2{
@@ -443,26 +422,7 @@ button:hover {
     margin-right: 830px;
     padding: 10px, 5px,;
 }
-.youtube{
-    border: 2px outset white;
-    background-color: #7ab7d6;
-    box-sizing: border-box;
-    padding: 10px;
-    flex-direction: column;
-    display: inline-flex;
-    border-radius: 10px;
-    align-items: left;
-    justify-content: flex-start;
-}
-.youtube a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
 
-.youtube a:hover {
-    color: #333;
-}
 .home-button a {
     display: flex;
     flex-direction: column;
@@ -488,7 +448,7 @@ button:hover {
     content: '';
     width: 10px;
     height: 15px;
-    background-color: 	#304674;
+    background-color: 	white;
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -501,79 +461,6 @@ button:hover {
     font-weight: bold;
     font-size: 1.1rem;
 }
-/* Container to hold buttons in a row */
-.button-container {
-    display: flex;
-    justify-content: center; /* Center the buttons */
-    gap: 20px; /* Space between buttons */
-    position: absolute;
-    bottom: -800px; /* Distance from the bottom of the viewport */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Individual button styling */
-.test-button a {
-    display: flex;
-    flex-direction: column; /* Arrange icon above text */
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-    border-radius: 15px;
-}
-
-/* Icon styling */
-.icon-clipboard {
-    width: 40px;
-    height: 50px;
-    background-color: #304674;
-    border-radius: 5px;
-    position: relative;
-    margin-bottom: 8px; /* Space between icon and text */
-}
-
-/* Top line inside icon */
-.icon-clipboard::before {
-    content: '';
-    width: 30px;
-    height: 5px;
-    background-color: #fff;
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 3px;
-}
-
-/* Checkmark inside icon */
-.icon-clipboard::after {
-    content: '';
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    width: 15px;
-    height: 10px;
-    border: solid #fff;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-}
-
-/* Button text styling */
-.test-button span {
-    color: #304674;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-align: center; /* Center the text */
-}
-
-.animal{
-    flex-direction: column;
-    align-items: center;
-    text-align: flex-start;
-    justify-content: space-around;
-}
-
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -661,26 +548,6 @@ button:hover {
     visibility: hidden;
 }
 
-.text-with-background {
-    background-image: url('GettyImages-517751240-1024x697.png'); /* Path to your image */
-    background-size: cover;  /* Makes the image cover the entire text area */
-    color: white;  /* Adjust text color for contrast */
-    padding: 20px; /* Adds space around the text */
-    font-size: 2em; /* Adjust font size */
-    text-align: center; /* Centers the text */
-    display: inline-block; /* Keeps the text wrapped within the image bounds */
-}
-
-.overlay-container {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-    color: #ffffff;
-    padding: 20px;
-    max-width: 1200px; /* Maximum width */
-    width: 100%; /* Full width up to max-width */
-    border-radius: 8px; /* Optional rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow */
-    text-align: center;
-}
 
 .image{
     text-align: right;
@@ -701,21 +568,37 @@ img{
 }
 
 .burat1 h1{
-    color: black;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    line-height: 60px;
+    font-size: 45px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 .burat2 h1{
-    color: black;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    line-height: 60px;
+    font-size: 45px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 .burat3 h1{
-    color: black;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    line-height: 60px;
+    font-size: 45px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
+
 .burat1 {
-    color: black;
+    color: white;
     border: 2px outset white;
     background-color: #98bad5;
-    width: 370px auto;
-    height: auto;
+    width: 400px;
+    height: 830px;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
@@ -726,25 +609,31 @@ img{
     margin-top: 15px;
     text-align: flex-start; /* Center-align text */
     justify-content: space-around;
+    align-self: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: -65.6px;
 }
 .image2{
-    width: 300px;
-    height: 740px;
+    width: 360px;
+    height: 1200px, auto;
     border-radius: 15px;
     margin-top: 10px;
+    margin-bottom: 10px;
     line-height: 35px;
+    margin-top: -15px;
     color: black;
 }
+
 img{
     max-width: 100%;
     max-height: 100%;
 }
 .burat2 {
-    color: black;
+    color: white;
     border: 2px outset white;
     background-color: #98bad5;
-    width: 370px;
-    height: 760px;
+    width: 400px;
+    height: 830px;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
@@ -756,22 +645,25 @@ img{
     text-align: flex-start; /* Center-align text */
     justify-content: space-around;
     align-self: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
 }
 .image3{
-    width: 360px;
-    height: 900px;
+    width: 410px;
+    height: 900px, auto;
     border-radius: 15px;
-    margin-top: 10px;
     margin-bottom: 10px;
-    line-height: 55px;
+    margin-bottom: 100px;
+    line-height: 35px;
     color: black;
 }
+
 .burat3 {
-    color: black;
+    color: white;
     border: 2px outset white;
     background-color: #98bad5;
-    width: 370px;
-    height: 760px;
+    width: 400px;
+    height: 830px;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
@@ -783,67 +675,18 @@ img{
     text-align: flex-start; /* Center-align text */
     justify-content: space-around;
     align-self: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+
 .image4{
-    width: 360px;
-    height: 900px;
+    width: 410px;
+    height: 900px, auto;
     border-radius: 15px;
-    margin-top: 10px;
     margin-bottom: 10px;
-    line-height: 45px;
-}
-
-@media print {
-    /* Hide the print button when printing */
-    #print-button {
-        display: none;
-    }
-}
-
-
-.certificate {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    border: 2px solid #000;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
-
-.certificate h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    color: #333;
-}
-
-.certificate p {
-    font-size: 18px;
-    color: #555;
-}
-
-.certificate strong {
-    color: #333;
-}
-
-.button-row {
-    display: flex; /* Use Flexbox for horizontal alignment */
-    justify-content: center; /* Center the buttons within the container */
-    gap: 10px; /* Add space between buttons */
-    padding: 0px;
-    width: 300px;
-    margin: auto;
-    height: 60;
-}
-
-.image6{
-    border-radius: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 45px;
+    margin-bottom: 100px;
+    margin-top: -30px;
+    line-height: 35px;
+    color: black;
 }
 
 /* Base styling for tips */
@@ -1037,6 +880,7 @@ img{
     width: 70px;
     height: 70px;
     margin-left: 10px;
+    margin-top: -0px;
 }
 
 .close-btn {
@@ -1046,18 +890,242 @@ img{
     background: none;
     position: fixed; /* Fixed position */
     top: 0px;
-    left: 0px;
+    left: 165px;
     cursor: pointer;
     z-index: 1001; /* Ensure it's above other content */
     display: none; /* Hide by default */
     width: 70px;
     height: 70px;
     margin-left: 10px;
+    margin-top: -0px;
 }
 
-/* Optional: Style the content area to accommodate the sidebar */
+
+/* Icon container */
+.assessment-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Checkmark */
+  .assessment-icon::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+    top: 18px;
+    left: 30px;
+  }
+
+  /* Sidebar assessment icon */
+.assessment-icon-sidebar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 8px;
+  }
+
+  /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #b2cbde;
+    background: (#b2cbde, #2a52be);
+    margin: 0; /* Removed duplicate margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.shesh {
+    padding: 10px;
+    border: 2px outset white;
+    background-color: #98bad5;
+    width: 100%;
+    max-width: 90%; /* Adjust width for mobile */
+    height: auto;
+    border-radius: 10px;
+    border: 2.5px outset black;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-size: 18px; /* Adjusted font size for better readability */
+    margin: 10px auto;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Questionnaire Container */
+.questionnaire {
+    width: 100%;
+    max-width: 600px;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+}
+
+/* Question Block Styles */
+.question-block {
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px outset black;
+    background-color: #98bad5;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* Options Styles */
+.options label {
+    display: block;
+    margin: 5px auto;
+    font-size: 16px;
+}
+
+.shesh1 {
+    padding: 10px;
+    border: 2px outset white;
+    background-color: #98bad5;
+    width: 100%;
+    max-width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    border: 2.5px outset black;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    gap: 15px;
+}
+
+.shesh1 h2 {
+    font-size: 50px;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px; /* Smaller title font size for mobile */
+    }
+
+    .question-block {
+        width: 90%; /* Make question blocks more fluid */
+    }
+
+    .button1, button {
+        width: 100%; /* Buttons will take full width on mobile */
+        font-size: 18px; /* Adjust button font size */
+    }
+
+    .fat {
+        font-size: 150px; /* Reduce font size for smaller screens */
+        padding: 10px;
+    }
+
+    .ewan {
+        width: 90%; /* Adjust width to fit mobile screens */
+        font-size: 18px;
+    }
+
+    .navigation {
+        width: 100%; /* Full width for navigation */
+        font-size: 16px; /* Adjust navigation font size */
+    }
+
+    .image, .image2, .image3, .image4 {
+        width: 100%; /* Images should be full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .learner-types-container {
+        flex-direction: column; /* Stack learner types vertically on smaller screens */
+        align-items: center;
+    }
+
+    .bungot {
+        width: 100%; /* Bungot section takes full width */
+        font-size: 16px; /* Smaller font for mobile */
+    }
+
+    .frequency-box, .frequency-box1 {
+        width: 100%; /* Make frequency boxes more fluid */
+    }
+
+    .tips-box {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .question-block1 {
+        width: 90%; /* Fluid width for smaller screens */
+        justify-content: center;
+        align-items: center;
+        display: block;
+    }
+}
+
+/* Additional media queries for very small screens */
+@media (max-width: 480px) {
+    .fat {
+        font-size: 100px; /* Further reduce font size */
+    }
+
+    .button1, button {
+        padding: 8px; /* Smaller button padding */
+        font-size: 16px; /* Further reduce button font size */
+    }
+
+    .question-block1, .shesh, .shesh1 {
+        width: 100%; /* Ensure all blocks take full width */
+        font-size: 14px; /* Smaller text for better mobile readability */
+        justify-content: center;
+        align-items: center;
+        display: block;
+    }
+
+    .learner-types-container {
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
 }
