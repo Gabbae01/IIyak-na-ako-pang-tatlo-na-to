@@ -1,19 +1,17 @@
 /* General Styles */
-
 body {
     background-color: #b2cbde;
-    background: (#b2cbde, #2a52be);
-    margin: 15px;
+    background: #b2cbde, #2a52be; /* Use proper shorthand */
+    margin: 0; /* Removes default margin */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     overflow-x: hidden; /* Prevent horizontal overflow */
     background-size: cover; /* Ensures the image covers the whole screen */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-            background-attachment: fixed; /* Keeps the image fixed while scrolling */
-            background-position: center; /* Centers the image */
-            margin: 0; /* Removes default margin */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-position: center; /* Centers the image */
 }
 
 .shesh {
@@ -58,12 +56,12 @@ p {
     padding: 10px;
 }
 
-/* Questionnaire Container */
 .questionnaire {
     width: 100%;
     max-width: 600px;
-    margin: 0 ;
+    margin: 0 auto;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Question Block Styles */
@@ -93,36 +91,52 @@ p {
     font-size: 16px;
 }
 
-.shesh1{
+
+
+.shesh1 {
     padding: 10px;
     border: 2px outset white;
     background-color: #98bad5;
     width: 100%;
-    max-width: 600px; /* Reduced width for better fit */
-    height: 100px; /* Removed fixed height to allow content to adjust */
+    max-width: 650px;
     border-radius: 10px;
     border: 2.5px outset black;
     margin-top: 20px;
-    font-size: 30px; /* Reduced font size for better fit */
-    text-align: center; /* Center text inside the box */
-    gap: 15px;
-    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.shesh1 h2{
-    font-size: 50px;
-    padding-top: 10px;
-    padding-bottom: 70px;
-    margin-bottom: 11px;
+/* Remove excessive padding and margin in h2 */
+.shesh1 h2 {
+    font-size: 30px; /* Adjust font size as needed */
+    margin: 0;
+    padding: 10px 0; /* Reduced top and bottom padding */
     text-align: center;
-    margin-top: -0px;
+}
 
+/* Reset margin and padding for body, html, and all elements */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Parent container for centering */
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: -200px;
 }
 
 /* Question Block Styles */
 .question-block1 {
-    margin-top: 100px;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 10px;
     border: 2px outset black;
     background-color: #98bad5;
@@ -130,9 +144,10 @@ p {
     width: 100%;
     max-width: 600px;
     box-sizing: border-box;
-    margin-right: 200px;
+    text-align: center;
 }
 
+/* Label styling */
 .question-block1 label {
     display: block;
     margin-bottom: 10px;
@@ -142,6 +157,41 @@ p {
     margin-top: 5px;
     margin-left: 15px;
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .question-block1 {
+        margin: 15px auto;
+        padding: 15px;
+        width: 90%;
+        margin-top: -10px;
+    }
+
+    .question-block1 label {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    /* Remove excessive padding and margin in h2 */
+    .shesh1 h2 {
+        font-size: 30px; /* Adjust font size as needed */
+        margin-top: -12px;
+        text-align: center;
+        margin-bottom: -0px;
+    }
+    /* Parent container for centering */
+    .parent-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin-top: -430px;
+}
+}
+
+
+
+
+
 
 /* Options Styles */
 .options1 {
@@ -186,15 +236,15 @@ p {
 
 /* Button Styles */
 .button1 {
-        width: auto;
-        height: 50px;
-        margin-bottom: 10px;
-        border: 2px outset white;
-        background-color: #7ab7d6;
-        color: black;
-    }
+    width: auto;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 2px outset white;
+    background-color: #7ab7d6;
+    color: black;
+}
 
-h2{
+h2 {
     font-size: 40px;
 }
 
@@ -210,13 +260,37 @@ button {
     cursor: pointer;
     margin-top: 15px;
     height: 85px;
-    width: 300px;
+    width: 300px; /* Default width for larger screens */
     margin-bottom: 25px;
 }
 
+/* Button hover effect */
 button:hover {
     background-color: #0056b3;
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Adjust button width for smaller screens */
+    button {
+        width: 100%; /* Full width on mobile */
+        height: 60px; /* Smaller height for mobile */
+        font-size: 18px; /* Slightly smaller font size */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    /* Adjust heading size for mobile */
+    h2 {
+        font-size: 30px; /* Smaller font size for mobile */
+    }
+
+    /* Adjust margins and spacing */
+    .button1 {
+        width: 100%; /* Full width on mobile */
+        height: 45px; /* Adjust height for better fit */
+    }
+}
+
 
 /* Specific Component Styles (No Changes) */
 .fat {
@@ -236,12 +310,27 @@ button:hover {
     padding-left: 15px;
     padding-right: 15px;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 520px;
+    font-size: 520px; /* Font size for desktop */
 }
 
-.fat h2{
-    font-size: 100px;
+.fat h2 {
+    font-size: 100px; /* Font size for the heading */
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 780px) {
+    .fat {
+        margin-top: 70px;
+        font-size: 150px; /* Reduce font size on mobile */
+        padding: 20px; /* Adjust padding on mobile */
+        height: auto; /* Allow height to adjust on mobile */
+    }
+
+    .fat h2 {
+        font-size: 40px; /* Smaller font size for the heading on mobile */
+    }
+}
+
 
 .submit-button {
     width: auto;
@@ -258,35 +347,74 @@ button:hover {
     border: 2px outset white;
     font-family: 'Courier New', Courier, monospace;
     background-color: #98bad5;
-    width: 1300px ;
-    height: 400px;
+    width: 100%; /* Full width by default */
+    max-width: 1300px; /* Maximum width */
+    height: 400px; /* Default height for larger screens */
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: row; /* Default to row layout on desktop */
     align-items: center; /* Center items horizontally */
     border-radius: 15px;
     padding: 20px; /* Adjust padding as needed */
     font-size: 25px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    text-align: flex-start; /* Center-align text */
+    margin-bottom: 30px; /* Space below the container */
+    margin-top: 30px; /* Space above the container */
+    text-align: flex-start; /* Align text to the left */
     justify-content: space-around;
+    clear: both; /* Prevent overlap */
 }
 
 .ewan h2 {
     font-size: 37px; /* Adjust title font size */
     font-weight: bold;
     margin-bottom: 10px; /* Space between title and description */
-    margin-top: -0;
+    margin-top: -16;
 }
 
-.ewan h1{
+.ewan h1 {
     color: black;
 }
 
 .ewan p {
     font-size: 25px; /* Adjust description font size */
     line-height: 1.5; /* Improve readability */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* Images in the .ewan container */
+.ewan img {
+    width: 500px;   /* Fixed width for desktop */
+    height: 400px;  /* Fixed height for desktop */
+    object-fit: cover; /* Ensure images fit within set dimensions */
+    margin-bottom: 20px; /* Add space between image and text */
+    margin-top: 50px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .ewan {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center;     /* Center items on mobile */
+        width: 100%;             /* Full width on mobile */
+        max-width: none;         /* Remove max-width restriction */
+        height: auto;            /* Allow height to adjust based on content */
+    }
+
+    .ewan h2 {
+        font-size: 30px;         /* Adjust title size for mobile */
+        text-align: center;
+    }
+
+    .ewan p {
+        font-size: 20px;         /* Adjust paragraph size for mobile */
+    }
+
+    /* Images on mobile: Fixed size */
+    .ewan img {
+        width: 3350px;   /* Fixed width for mobile */
+        height: 400px;  /* Fixed height for mobile */
+        margin-bottom: 20px; /* Less margin on mobile */
+    }
 }
 
 
@@ -340,6 +468,7 @@ button:hover {
     width: 100%;
 }
 
+/* .frequency-box1 */
 .frequency-box1 {
     border: 2px outset black;
     padding: 15px;
@@ -352,29 +481,15 @@ button:hover {
     color: black;
     hyphens: none;
     white-space: nowrap;
-    max-width: 650px;
+    max-width: 650px; /* Ensure max-width */
     width: 41%;
-    width: 760px;
+    width: 760px; /* Ensure correct width */
     align-items: center;
 }
 
 
-.tips-box {
-    border: 2px outset black;
-    padding: 15px;
-    margin-top: 20px;
-    background-color: #7ab7d6;
-    border-radius: 8px;
-    text-align: left;
-    font-size: 18px;
-    color: white;
-    font-size: 30px;
-    width: 100%px;
-    height: auto;
-    hyphens: none;
-    max-width: 1200px;
-}
 
+/* .bungot */
 .bungot {
     border: 2px outset black;
     padding-left: 10px;
@@ -388,32 +503,93 @@ button:hover {
     justify-content: center;
     width: 670px;
     height: 90px;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: row; /* Default to row layout */
+    text-align: center;
 }
 
-.bungot h2{
+/* Bungot Headings */
+.bungot h2 {
     text-align: center;
     align-items: center;
     margin-top: 20px;
 }
 
-.bungot h1{
+.bungot h1 {
     margin-top: 27.8px;
     text-align: center;
     color: black;
     align-items: center;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 780px) {
+    /* Adjust .frequency-box1 for mobile */
+    .frequency-box1 {
+        width: 450px; /* Optional: limit max-width */
+        font-size: 20px; /* Smaller font size on mobile */
+    }
+
+    /* Adjust .tips-box for mobile */
+    .tips-box {
+        width: 100%; /* Full width on mobile */
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    /* Adjust .bungot for mobile */
+    .bungot {
+        width: 100%; /* Full width on mobile */
+        max-width: 400px; /* Optional: limit max-width */
+        font-size: 14px; /* Smaller font size on mobile */
+        height: auto; /* Auto height for mobile */
+        flex-direction: column; /* Stack content vertically */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .bungot h2 {
+        margin-top: 10px; /* Adjust margin for better spacing on mobile */
+    }
+
+    .bungot h1 {
+        margin-top: 15px; /* Adjust margin for heading */
+    }
+}
+
+
+/* Default flexbox layout for desktop */
 .learner-types-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Spread items evenly */
+    flex-direction: row; /* Default to row layout on desktop */
+    justify-content: space-between; /* Space out items */
     align-items: flex-start; /* Align items to the top */
     margin-top: 20px;
     width: 100%;
-    max-width: 1200px; /* Container width */
+    max-width: 1200px;
     gap: 20px; /* Space between items */
     margin: auto;
 }
+
+/* Individual child item styles to ensure they adjust accordingly */
+.learner-type {
+    flex: 1 1 auto; /* Allow the children to grow or shrink as needed */
+    min-width: 200px; /* Ensure a minimum width */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .learner-types-container {
+        flex-direction: column; /* Change to column layout on mobile */
+        align-items: center;     /* Center items on mobile */
+        margin-left: 30px;
+    }
+
+    /* Ensure child items take full width on mobile */
+    .learner-type {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 15px; /* Add spacing between items */
+    }
+}
+
 
 .body-container {
     display: flex;
@@ -593,100 +769,73 @@ img{
 }
 
 
-.burat1 {
+/* Container for burat1, burat2, and burat3 */
+.burat-container {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically by default */
+    gap: 20px; /* Space between items */
+    align-items: center;  /* Center the items horizontally */
+    margin-top: 20px;
+}
+
+/* Individual box styling */
+.burat1, .burat2, .burat3 {
     color: white;
     border: 2px outset white;
     background-color: #98bad5;
-    width: 400px;
-    height: 830px;
+    width: 350px;             /* Width of each box */
+    height: 750px;            /* Height of each box */
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;   /* Stack elements vertically */
+    align-items: center;      /* Center items horizontally */
     border-radius: 15px;
-    padding: 20px; /* Adjust padding as needed */
-    font-size: 25px;
+    padding: 15px;            /* Padding for spacing */
+    font-size: 22px;          /* Font size for the text */
     margin-bottom: 15px;
     margin-top: 15px;
-    text-align: flex-start; /* Center-align text */
+    text-align: left;         /* Align text to the left */
     justify-content: space-around;
-    align-self: normal;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: -65.6px;
-}
-.image2{
-    width: 360px;
-    height: 1200px, auto;
-    border-radius: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 35px;
-    margin-top: -15px;
-    color: black;
 }
 
-img{
-    max-width: 100%;
-    max-height: 100%;
-}
-.burat2 {
-    color: white;
-    border: 2px outset white;
-    background-color: #98bad5;
-    width: 400px;
-    height: 830px;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
-    border-radius: 15px;
-    padding: 20px; /* Adjust padding as needed */
-    font-size: 25px;
+/* For images, keep them at their original size */
+.image, .image2, .image3, .image4 {
+    width: auto;              /* Auto width to maintain original image size */
+    height: auto;             /* Auto height to maintain original image size */
+    max-width: 100%;          /* Make sure they don't overflow the container */
     margin-bottom: 15px;
-    margin-top: 15px;
-    text-align: flex-start; /* Center-align text */
-    justify-content: space-around;
-    align-self: normal;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
-}
-.image3{
-    width: 410px;
-    height: 900px, auto;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    margin-bottom: 100px;
-    line-height: 35px;
-    color: black;
 }
 
-.burat3 {
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .burat-container {
+        flex-direction: column;  /* Stack items vertically on mobile */
+        align-items: center;     /* Center the items */
+    }
+
+    .burat1, .burat2, .burat3 {
+        width: 100%;             /* Full width on mobile */
+        max-width: 400px;        /* Allow some width flexibility on mobile */
+    }
+}
+
+/* .tips-box */
+.tips-box {
+    border: 2px outset black;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #7ab7d6;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 30px; /* Adjusted font-size */
     color: white;
-    border: 2px outset white;
-    background-color: #98bad5;
-    width: 400px;
-    height: 830px;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
-    border-radius: 15px;
-    padding: 20px; /* Adjust padding as needed */
-    font-size: 25px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    text-align: flex-start; /* Center-align text */
-    justify-content: space-around;
-    align-self: normal;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-.image4{
-    width: 410px;
-    height: 900px, auto;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    margin-bottom: 100px;
-    margin-top: -30px;
-    line-height: 35px;
-    color: black;
+    hyphens: none;
+    max-width: 1200px;
+    width: 100%; /* Ensure full width */
+    height: auto;
+    display: flex; /* Flexbox to stack elements vertically */
+    flex-direction: column; /* Stack images and text vertically */
+    gap: 20px; /* Add space between image and text */
 }
 
 /* Base styling for tips */
@@ -698,27 +847,16 @@ img{
 .kinesthetic-tip1, .kinesthetic-tip2, .kinesthetic-tip3, .kinesthetic-tip4, .kinesthetic-tip5,
 .kinesthetic-tip6, .kinesthetic-tip7, .kinesthetic-tip8, .kinesthetic-tip9, .kinesthetic-tip10, .kinesthetic-tip11 {
     margin: 10px 0;
-    font-size: 20px;
+    font-size: 30px;
     width: 100%;
     max-width: 1200px;
-}
-
-/* Styling for Visual Learning Tips */
-.visual-tip1, .visual-tip2, .visual-tip3, .visual-tip4, .visual-tip5,
-.visual-tip6, .visual-tip7, .visual-tip8, .visual-tip9, .visual-tip10, .visual-tip11 {
-    color: white;
-    background-color: #7ab7d6;
-    padding: 8px;
-    border-radius: 8px;
-    max-width: 100%;  /* Ensure the image is responsive */
-    height: auto;     /* Maintain aspect ratio */
-    margin: 10px 0;   /* Space around the image */
     display: flex;
-    align-items: center;
-    gap: 15px; /* Adds space between text and image */
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Center align content for mobile */
 }
 
-/* Container to align text and image side by side */
+/* Container to align text and image side by side (default for larger screens) */
 .visual-tip-container,
 .auditory-tip-container,
 .kinesthetic-tip-container {
@@ -728,44 +866,61 @@ img{
 }
 
 /* Styling for Visual Learning Tips - Container */
-.visual-tip-container img {
-    max-width: 35%;  /* Image takes up to 35% of container */
-    object-fit: cover; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: rounded corners for images */
-}
-
-/* Styling for Auditory Learning Tips - Container */
-.auditory-tip-container img {
-    max-width: 35%;  /* Image takes up to 35% of container */
-    object-fit: cover; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: rounded corners for images */
-}
-
-/* Styling for Kinesthetic Learning Tips - Container */
+.visual-tip-container img,
+.auditory-tip-container img,
 .kinesthetic-tip-container img {
     max-width: 35%;  /* Image takes up to 35% of container */
     object-fit: cover; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: rounded corners for images */
 }
 
-/* Adjusted styling for the image in the auditory tips */
-.auditory-tip1, .auditory-tip2, .auditory-tip3, .auditory-tip4, .auditory-tip5,
-.auditory-tip6, .auditory-tip7, .auditory-tip8, .auditory-tip9, .auditory-tip10,
-.auditory-tip11, .auditory-tip12, .auditory-tip13, .auditory-tip14, .auditory-tip15 {
-    color: white;
-    background-color: #7ab7d6;
-    padding: 8px;
-    border-radius: 8px;
-    max-width: 100%;  /* Ensure the image is responsive */
-    height: auto;     /* Maintain aspect ratio */
-    margin: 10px 0;   /* Space around the image */
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Adds space between text and image */
-    font-size: 35px;
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .tips-box {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    /* Adjust the font size for smaller screens */
+    .visual-tip1, .visual-tip2, .visual-tip3, .visual-tip4, .visual-tip5,
+    .visual-tip6, .visual-tip7, .visual-tip8, .visual-tip9, .visual-tip10, .visual-tip11,
+    .auditory-tip1, .auditory-tip2, .auditory-tip3, .auditory-tip4, .auditory-tip5,
+    .auditory-tip6, .auditory-tip7, .auditory-tip8, .auditory-tip9, .auditory-tip10,
+    .auditory-tip11, .auditory-tip12, .auditory-tip13, .auditory-tip14, .auditory-tip15,
+    .kinesthetic-tip1, .kinesthetic-tip2, .kinesthetic-tip3, .kinesthetic-tip4, .kinesthetic-tip5,
+    .kinesthetic-tip6, .kinesthetic-tip7, .kinesthetic-tip8, .kinesthetic-tip9, .kinesthetic-tip10, .kinesthetic-tip11 {
+        font-size: 30px; /* Adjust font size for mobile */
+    }
+
+    /* Stack the text and image vertically on mobile */
+    .visual-tip-container,
+    .auditory-tip-container,
+    .kinesthetic-tip-container {
+        flex-direction: column; /* Stack them vertically */
+        align-items: center;     /* Center items */
+        gap: 10px;               /* Reduce gap between image and text */
+    }
+
+    /* Image size adjustments for mobile */
+    .visual-tip-container img,
+    .auditory-tip-container img,
+    .kinesthetic-tip-container img {
+        max-width: 80%;  /* Make images larger on mobile */
+        object-fit: contain; /* Maintain aspect ratio */
+    }
+
+    .visual-tip3, .visual-tip5 {
+        font-size: 10011px;
+    }
 }
 
-/* Styling for Kinesthetic Learning Tips */
+
+
+/* For all tip types with images */
+.visual-tip1, .visual-tip2, .visual-tip3, .visual-tip4, .visual-tip5,
+.visual-tip6, .visual-tip7, .visual-tip8, .visual-tip9, .visual-tip10, .visual-tip11,
+.auditory-tip1, .auditory-tip2, .auditory-tip3, .auditory-tip4, .auditory-tip5,
+.auditory-tip6, .auditory-tip7, .auditory-tip8, .auditory-tip9, .auditory-tip10,
+.auditory-tip11, .auditory-tip12, .auditory-tip13, .auditory-tip14, .auditory-tip15,
 .kinesthetic-tip1, .kinesthetic-tip2, .kinesthetic-tip3, .kinesthetic-tip4, .kinesthetic-tip5,
 .kinesthetic-tip6, .kinesthetic-tip7, .kinesthetic-tip8, .kinesthetic-tip9, .kinesthetic-tip10, .kinesthetic-tip11 {
     color: white;
@@ -778,17 +933,8 @@ img{
     display: flex;
     align-items: center;
     gap: 15px; /* Adds space between text and image */
-    font-size: 35px;
 }
 
-.tip-image {
-    max-width: 100%;  /* Ensure the image is responsive */
-    height: auto;     /* Maintain aspect ratio */
-    margin: 10px 0;   /* Space around the image */
-    float: left;
-    width: 360px;
-    height: 250px;
-}
 
 /* Falling shapes container */
 .falling-shapes-container {
@@ -1001,6 +1147,8 @@ p {
     max-width: 600px;
     margin: 0;
     padding: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Question Block Styles */
@@ -1042,90 +1190,4 @@ p {
     padding-top: 10px;
     padding-bottom: 70px;
     text-align: center;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 28px; /* Smaller title font size for mobile */
-    }
-
-    .question-block {
-        width: 90%; /* Make question blocks more fluid */
-    }
-
-    .button1, button {
-        width: 100%; /* Buttons will take full width on mobile */
-        font-size: 18px; /* Adjust button font size */
-    }
-
-    .fat {
-        font-size: 150px; /* Reduce font size for smaller screens */
-        padding: 10px;
-    }
-
-    .ewan {
-        width: 90%; /* Adjust width to fit mobile screens */
-        font-size: 18px;
-    }
-
-    .navigation {
-        width: 100%; /* Full width for navigation */
-        font-size: 16px; /* Adjust navigation font size */
-    }
-
-    .image, .image2, .image3, .image4 {
-        width: 100%; /* Images should be full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .learner-types-container {
-        flex-direction: column; /* Stack learner types vertically on smaller screens */
-        align-items: center;
-    }
-
-    .bungot {
-        width: 100%; /* Bungot section takes full width */
-        font-size: 16px; /* Smaller font for mobile */
-    }
-
-    .frequency-box, .frequency-box1 {
-        width: 100%; /* Make frequency boxes more fluid */
-    }
-
-    .tips-box {
-        width: 100%;
-        font-size: 18px;
-    }
-
-    .question-block1 {
-        width: 90%; /* Fluid width for smaller screens */
-        justify-content: center;
-        align-items: center;
-        display: block;
-    }
-}
-
-/* Additional media queries for very small screens */
-@media (max-width: 480px) {
-    .fat {
-        font-size: 100px; /* Further reduce font size */
-    }
-
-    .button1, button {
-        padding: 8px; /* Smaller button padding */
-        font-size: 16px; /* Further reduce button font size */
-    }
-
-    .question-block1, .shesh, .shesh1 {
-        width: 100%; /* Ensure all blocks take full width */
-        font-size: 14px; /* Smaller text for better mobile readability */
-        justify-content: center;
-        align-items: center;
-        display: block;
-    }
-
-    .learner-types-container {
-        gap: 10px; /* Reduce gap for smaller screens */
-    }
 }

@@ -127,17 +127,25 @@ const updatedKinestheticTips = removeEmptyDivs(kinestheticTips);
 
 
 // Generate overall tips based on the user's choices
-let tips = '';
+let learningStyleMessage = "";
+let tips = "";
 
+// Check for the learning style
 if (frequency.A > frequency.B && frequency.A > frequency.C) {
-    tips += '<strong>Learning Style:</strong> You are a Visual Learner.' + visualTips.join('');
+    learningStyleMessage = '<strong>Learning Style:</strong> You are a Visual Learner.<br><br>';  // Added <br><br> for space
+    tips += visualTips.join('');  // Add visual tips after the message
 } else if (frequency.B > frequency.A && frequency.B > frequency.C) {
-    tips += '<strong>Learning Style:</strong> You are an Auditory Learner.' + auditoryTips.join('');
+    learningStyleMessage = '<strong>Learning Style:</strong> You are an Auditory Learner.<br><br>';  // Added <br><br> for space
+    tips += auditoryTips.join('');  // Add auditory tips after the message
 } else if (frequency.C > frequency.A && frequency.C > frequency.B) {
-    tips += '<strong>Learning Style:</strong> You are a Kinesthetic Learner.' + kinestheticTips.join('');
+    learningStyleMessage = '<strong>Learning Style:</strong> You are a Kinesthetic Learner.<br><br>';  // Added <br><br> for space
+    tips += kinestheticTips.join('');  // Add kinesthetic tips after the message
 } else {
-    tips += "<strong>Learning Style:</strong> Your learning style is mixed.<br><br><strong>Tips for you:</strong><br><br> Try using multiple methods to enhance your learning experience.";
+    learningStyleMessage = "<strong>Learning Style:</strong> Your learning style is mixed.<br><br><strong>Tips for you:</strong><br><br> Try using multiple methods to enhance your learning experience.<br><br>";
 }
+
+// Combine the learning style message and tips
+tips = learningStyleMessage + tips;
 
 
     // Store the tips in localStorage
