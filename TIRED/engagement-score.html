@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Engagement Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="bungot">
+    <h2>Learning Engagement Result</h2>
+</div>
+<div class="frequency-box1">
+    <div id="engagement-result">
+        <!-- The engagement level will be displayed here -->
+    </div>
+</div>
+<div id="frequencies">
+    <div class="frequency-box">
+        <p>High Engagement (A): <span id="frequencyA"></span></p>
+    </div>
+    <div class="frequency-box">
+        <p>Moderate Engagement (B): <span id="frequencyB"></span></p>
+    </div>
+    <div class="frequency-box">
+        <p>Low Engagement (C): <span id="frequencyC"></span></p>
+    </div>
+</div>
+
+
+<div class="button-row">
+    <!-- Navigation Buttons -->
+      <!--
+    <button id="print-button" class="printButtonize" onclick="printCertificate()">Print Certificate</button>  --> 
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='engagement-questions.html'">Back</button>
+</div>
+
+    <script>
+        // Retrieve the stored values from localStorage
+        const engagementLevel = localStorage.getItem('engagementLevel') || 'No Engagement Level Calculated';
+        const frequencyA = localStorage.getItem('frequencyA') || 0;
+        const frequencyB = localStorage.getItem('frequencyB') || 0;
+        const frequencyC = localStorage.getItem('frequencyC') || 0;
+
+        // Display the engagement level result
+        document.getElementById('engagement-result').innerText = `Your Engagement Level: ${engagementLevel}`;
+
+        // Display the frequencies of each answer
+        document.getElementById('frequencyA').innerText = frequencyA;
+        document.getElementById('frequencyB').innerText = frequencyB;
+        document.getElementById('frequencyC').innerText = frequencyC;
+    </script>
+    </div>
+</body>
+</html>

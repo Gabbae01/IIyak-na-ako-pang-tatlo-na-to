@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Engagement Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bungot">
+    <h2>Learning Engagement Result</h2>
+
+    <div id="engagement-result">
+        <!-- The engagement level will be displayed here -->
+    </div>
+
+    <div id="frequencies">
+        <p>High Engagement (A): <span id="frequencyA"></span></p>
+        <p>Moderate Engagement (B): <span id="frequencyB"></span></p>
+        <p>Low Engagement (C): <span id="frequencyC"></span></p>
+    </div>
+
+    <div class="home-button">
+        <a href="index.html">Go to Home</a>
+    </div>
+
+    <script>
+        // Retrieve the stored values from localStorage
+        const engagementLevel = localStorage.getItem('engagementLevel');
+        const frequencyA = localStorage.getItem('frequencyA');
+        const frequencyB = localStorage.getItem('frequencyB');
+        const frequencyC = localStorage.getItem('frequencyC');
+
+        // Display the engagement level result
+        document.getElementById('engagement-result').innerText = `Your Engagement Level: ${engagementLevel}`;
+
+        // Display the frequencies of each answer
+        document.getElementById('frequencyA').innerText = frequencyA || 0;
+        document.getElementById('frequencyB').innerText = frequencyB || 0;
+        document.getElementById('frequencyC').innerText = frequencyC || 0;
+    </script>
+    </div>
+</body>
+</html>
