@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Styles Research Output</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+    <div class="bungot">
+        <h1>Your Learning Style Tips</h1>
+    </div>
+
+    <!-- Frequency Boxes for each type -->
+    <div class="frequency-box">
+        <p>Frequency of selecting A (Visual Learner): <span id="frequencyA"></span></p>
+    </div>
+    <div class="frequency-box">
+        <p>Frequency of selecting B (Auditory Learner): <span id="frequencyB"></span></p>
+    </div>
+
+    <div class="frequency-box">
+        <p>Frequency of selecting C (Kinesthetic Learner): <span id="frequencyC"></span></p>
+    </div>
+ <!--
+     Certificate Section 
+    <div id="certificate-container" class="certificate">
+        <h2>Certificate of Completion</h2>
+        <p>This certifies that <strong><span id="participantName">[Your Name Here]</span></strong> has successfully completed the learning style quiz of the researchers from Grade 12 Stem students of Holy Trinity School.</p>
+        <p><strong>Learning Style:</strong> <span id="learningStyle">[Learning Style Here]</span></p>
+        <p><strong>Date:</strong> <span id="completionDate">[Completion Date Here]</span></p>
+    </div>
+-->
+
+    <!-- Tips Section -->
+
+    <div id="tips" class="tips-box"></div>
+<div class="button-row">
+    <!-- Navigation Buttons -->
+      <!--
+    <button id="print-button" class="printButtonize" onclick="printCertificate()">Print Certificate</button>  --> 
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='questions.html'">Back</button>
+</div>
+
+<div class="test-button">
+    <a href="certificate.html" title="Take the Test">
+
+    </a>
+</div>
+
+
+    <script>
+        // Retrieve values from localStorage
+        const frequencyA = localStorage.getItem('frequencyA');
+        const frequencyB = localStorage.getItem('frequencyB');
+        const frequencyC = localStorage.getItem('frequencyC');
+        const tips = localStorage.getItem('learningTips');
+        const participantName = localStorage.getItem('participantName') || "Your Name Here";
+
+        // Determine the learning style
+        let learningStyle = '';
+        if (frequencyA > frequencyB && frequencyA > frequencyC) {
+            learningStyle = 'Visual Learner';
+        } else if (frequencyB > frequencyA && frequencyB > frequencyC) {
+            learningStyle = 'Auditory Learner';
+        } else if (frequencyC > frequencyA && frequencyC > frequencyB) {
+            learningStyle = 'Kinesthetic Learner';
+        } else {
+            learningStyle = 'Mixed Learning Style';
+        }
+
+        // Display values in the certificate and tips section
+        document.getElementById('frequencyA').innerText = frequencyA || 'No data available';
+        document.getElementById('frequencyB').innerText = frequencyB || 'No data available';
+        document.getElementById('frequencyC').innerText = frequencyC || 'No data available';
+        document.getElementById('tips').innerHTML = tips || 'No tips available.';
+        document.getElementById('participantName').innerText = participantName;
+        document.getElementById('learningStyle').innerText = learningStyle;
+
+        // Set the completion date
+        const completionDate = new Date().toLocaleDateString();
+        document.getElementById('completionDate').innerText = completionDate;
+
+        function printCertificate() {
+            // Select the certificate container
+            const certificateContainer = document.getElementById('certificate-container');
+            
+            // Hide other content
+            const allContent = document.body.children;
+            Array.from(allContent).forEach(element => {
+                if (element !== certificateContainer) {
+                    element.style.visibility = 'hidden';
+                }
+            });
+            
+            // Print the certificate section
+            window.print();
+
+            // Restore other content after printing
+            setTimeout(() => {
+                Array.from(allContent).forEach(element => {
+                    if (element !== certificateContainer) {
+                        element.style.visibility = ''; // Reset visibility
+                    }
+                });
+            }, 1000); // Restore visibility after 1 second delay
+        }
+
+        console.log(localStorage.getItem('frequencyA')); // Should print a number
+        console.log(localStorage.getItem('frequencyB')); // Should print a number
+        console.log(localStorage.getItem('frequencyC')); // Should print a number
+        console.log(localStorage.getItem('learningTips')); // Should print your tips
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+

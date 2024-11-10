@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Styles Research Output</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <div class="shesh">
+        <h2>Questions:</h2>
+    </div>
+     <!--
+    <div id="name-input-section">
+        <label for="participantName">Enter your name:</label>
+        <input type="text" id="participantName" name="participantName" />
+        <button type="buttonSave" onclick="saveName()">Save Name</button> 
+    </div>  --> 
+    <div class="fade-scroll">
+    <div class="questionnaire">
+        <form id="questionForm">
+            <!-- Question 1 -->
+            <div class="question-block">
+                <label>Question 1: I find it easiest to remember:</label>
+                <div class="options">
+                    <label><input type="radio" name="answer1" value="1" required> What I see</label>
+                    <label><input type="radio" name="answer1" value="2" required> What I hear</label>
+                    <label><input type="radio" name="answer1" value="3" required> What I do</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <label>Question 2: When I can't understand a topic, I:</label>
+                <div class="options">
+                    <label><input type="radio" name="answer2" value="1" required> Watch videos and presentations to visualize the topic</label>
+                    <label><input type="radio" name="answer2" value="2" required> Ask someone to explain it to me</label>
+                    <label><input type="radio" name="answer2" value="3" required> Try to do it physically</label>
+                </div>
+            </div>
+            
+           
+            <!-- Question 3 -->
+            <div class="question-block">
+                <label>Question 3: I enjoy learning:</label>
+                <div class="options">
+                    <label><input type="radio" name="answer3" value="1" required> With images and diagrams</label>
+                    <label><input type="radio" name="answer3" value="2" required> Through listening to explanations</label>
+                    <label><input type="radio" name="answer3" value="3" required> Through hands-on experience</label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <label>Question 4: During class, I pay the most attention to: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer4" value="1" required> Slides or images on the board</label>
+                    <label><input type="radio" name="answer4" value="2" required> What the teacher says</label>
+                    <label><input type="radio" name="answer4" value="3" required> Activities where I can move or use objects
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <label>Question 5: To study effectively, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer5" value="1" required> Use charts, graphs, or flashcards</label>
+                    <label><input type="radio" name="answer5" value="2" required> Listen to recordings or discuss with friends</label>
+                    <label><input type="radio" name="answer5" value="3" required> Practice by doing or testing things</label>
+                </div>
+            </div>
+                                    <!-- Question 6 -->
+            <div class="question-block">
+                <label>Question 6: When solving a problem, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer6" value="1" required> Sketch it out or look at a diagram</label>
+                    <label><input type="radio" name="answer6" value="2" required> Talk it through with someone</label>
+                    <label><input type="radio" name="answer6" value="3" required> Experiment with objects or materials</label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-block">
+                <label>Question 7: When using a new app or gadget, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer7" value="1" required> Look at the icons to understand how it works</label>
+                    <label><input type="radio" name="answer7" value="2" required> Listen to instructions</label>
+                    <label><input type="radio" name="answer7" value="3" required> Prefer to explore it myself by trying out its features
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-block">
+                <label>Question 8: In art class, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer8" value="1" required> Appreciate the visual elements and details</label>
+                    <label><input type="radio" name="answer8" value="2" required> Enjoy discussing the meaning of art pieces</label>
+                    <label><input type="radio" name="answer8" value="3" required> Like creating sculptures or building models</label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-block">
+                <label>Question 9: In group projects, I contribute by: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer9" value="1" required> Creating visuals or organizing materials</label>
+                    <label><input type="radio" name="answer9" value="2" required> Explaining ideas and giving verbal input</label>
+                    <label><input type="radio" name="answer9" value="3" required> Setting up hands-on tasks or activities</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-block">
+                <label>Question 10: I prefer teachers who: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer10" value="1" required> Use presentations, videos, and pictures</label>
+                    <label><input type="radio" name="answer10" value="2" required> Explain things clearly and verbally</label>
+                    <label><input type="radio" name="answer10" value="3" required> Give practical demonstrations</label>
+                </div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question-block">
+                <label>Question 11: When giving directions, I prefer to: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer11" value="1" required> Draw a map</label>
+                    <label><input type="radio" name="answer11" value="2" required> Give verbal instructions</label>
+                    <label><input type="radio" name="answer11" value="3" required> Show someone physically</label>
+                </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question-block">
+                <label>Question 12: In a classroom, I enjoy: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer12" value="1" required> Reading or looking at pictures on the board</label>
+                    <label><input type="radio" name="answer12" value="2" required> Listening to lectures or audio discussions</label>
+                    <label><input type="radio" name="answer12" value="3" required> Participating in activities or role-playing</label>
+                </div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question-block">
+                <label>Question 13: I concentrate best when: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer13" value="1" required> Looking at notes, diagrams, or visuals</label>
+                    <label><input type="radio" name="answer13" value="2" required> Listening to someone explain</label>
+                    <label><input type="radio" name="answer13" value="3" required> Doing something hands-on</label>
+                </div>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question-block">
+                <label>Question 14: I learn best when: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer14" value="1" required> Information is presented visually</label>
+                    <label><input type="radio" name="answer14" value="2" required> I can talk through the material</label>
+                    <label><input type="radio" name="answer14" value="3" required> I can practice or engage physically</label>
+                </div>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="question-block">
+                <label>Question 15: I remember people by: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer15" value="1" required> Their face or appearance</label>
+                    <label><input type="radio" name="answer15" value="2" required> Their voice</label>
+                    <label><input type="radio" name="answer15" value="3" required> What we did together</label>
+                </div>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="question-block">
+                <label>Question 16: During a lecture, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer16" value="1" required> Focus on the visual aids like slides or notes</label>
+                    <label><input type="radio" name="answer16" value="2" required> Listen carefully to the speaker’s voice</label>
+                    <label><input type="radio" name="answer16" value="3" required> Struggle to sit still, preferring to move or fidget</label>
+                </div>
+            </div>
+
+            <!-- Question 17 -->
+            <div class="question-block">
+                <label>Question 17: I understand fictional stories better when: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer17" value="1" required> I see them as movies or illustrations</label>
+                    <label><input type="radio" name="answer17" value="2" required> I hear someone read them out loud</label>
+                    <label><input type="radio" name="answer17" value="3" required> I act out the scenes or play related games</label>
+                </div>
+            </div>
+
+            <!-- Question 18 -->
+            <div class="question-block">
+                <label>Question 18: If I have to give a presentation, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer18" value="1" required> Use pictures, charts, or diagrams</label>
+                    <label><input type="radio" name="answer18" value="2" required> Focus on delivering a clear speech</label>
+                    <label><input type="radio" name="answer18" value="3" required> Demonstrate something physically</label>
+                </div>
+            </div>
+
+            <!-- Question 19 -->
+            <div class="question-block">
+                <label>Question 19: I get distracted in class when: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer19" value="1" required> There are no visual aids</label>
+                    <label><input type="radio" name="answer19" value="2" required> The teacher speaks too fast or too slow</label>
+                    <label><input type="radio" name="answer19" value="3" required> I have to sit still for too long</label>
+                </div>
+            </div>
+
+            <!-- Question 20 -->
+            <div class="question-block">
+                <label>Question 20: I best express my ideas through: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer20" value="1" required> Drawing or writing</label>
+                    <label><input type="radio" name="answer20" value="2" required> Speaking</label>
+                    <label><input type="radio" name="answer20" value="3" required> Building or modeling</label>
+                </div>
+            </div>
+
+            <!-- Question 21 -->
+            <div class="question-block">
+                <label>Question 21: When learning a dance or physical activity, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer21" value="1" required> Watch others perform the moves and then copy them</label>
+                    <label><input type="radio" name="answer21" value="2" required> Listen to verbal instructions on how to do each move</label>
+                    <label><input type="radio" name="answer21" value="3" required> Prefer to jump in and try the moves myself</label>
+                </div>
+            </div>
+
+            <!-- Question 22 -->
+            <div class="question-block">
+                <label>Question 22: I find it easier to understand instructions: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer22" value="1" required> When they are written or shown in diagrams</label>
+                    <label><input type="radio" name="answer22" value="2" required> When they are explained to me verbally</label>
+                    <label><input type="radio" name="answer22" value="3" required> When I can follow along by doing it myself</label>
+                </div>
+            </div>
+
+            <!-- Question 23 -->
+            <div class="question-block">
+                <label>Question 23: When I get bored, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer23" value="1" required> Doodle or draw</label>
+                    <label><input type="radio" name="answer23" value="2" required> Talk to someone</label>
+                    <label><input type="radio" name="answer23" value="3" required> Move around or fidget</label>
+                </div>
+            </div>
+
+            <!-- Question 24 -->
+            <div class="question-block">
+                <label>Question 24: In science experiments, I enjoy:</label>
+                <div class="options">
+                    <label><input type="radio" name="answer24" value="1" required> Observing the setup and recording visual changes</label>
+                    <label><input type="radio" name="answer24" value="2" required> Discussing the results with my classmates</label>
+                    <label><input type="radio" name="answer24" value="3" required> Conducting the experiment and using lab equipment</label>
+                </div>
+            </div>
+
+            <!-- Question 25 -->
+            <div class="question-block">
+                <label>Question 25: I feel most comfortable in an exam when: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer25" value="1" required> I can visualize things in my mind</label>
+                    <label><input type="radio" name="answer25" value="2" required> I recall what I’ve heard in lessons</label>
+                    <label><input type="radio" name="answer25" value="3" required> I remember how I practiced the material</label>
+                </div>
+            </div>
+
+            <!-- Question 26 -->
+            <div class="question-block">
+                <label>Question 26: When trying to memorize a list, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer26" value="1" required> Create visual associations like color-coding or drawing symbols</label>
+                    <label><input type="radio" name="answer26" value="2" required> Say the list out loud or listen to it repeatedly</label>
+                    <label><input type="radio" name="answer26" value="3" required> Act it out or use physical objects to represent the items</label>
+                </div>
+            </div>
+
+            <!-- Question 27 -->
+            <div class="question-block">
+                <label>Question 27: I prefer books that: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer27" value="1" required> Have lots of pictures and diagrams</label>
+                    <label><input type="radio" name="answer27" value="2" required> I can listen to as an audiobook</label>
+                    <label><input type="radio" name="answer27" value="3" required> Include activities or experiments</label>
+                </div>
+            </div>
+
+            <!-- Question 28 -->
+            <div class="question-block">
+                <label>Question 28: I find that I understand stories better when: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer28" value="1" required> I can see them as movies or images</label>
+                    <label><input type="radio" name="answer28" value="2" required> I can listen to someone telling the story</label>
+                    <label><input type="radio" name="answer28" value="3" required> I can act them out or role-play</label>
+                </div>
+            </div>
+
+            <!-- Question 29 -->
+            <div class="question-block">
+                <label>Question 29: When planning a project, I: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer29" value="1" required> Make a visual timeline or chart</label>
+                    <label><input type="radio" name="answer29" value="2" required> Discuss the plan with my group</label>
+                    <label><input type="radio" name="answer29" value="3" required> Set up and start working on tasks</label>
+                </div>
+            </div>
+
+            <!-- Question 30 -->
+            <div class="question-block">
+                <label>Question 30: In my free time, I prefer activities that: </label>
+                <div class="options">
+                    <label><input type="radio" name="answer30" value="1" required> Involve watching movies, drawing, or visual art</label>
+                    <label><input type="radio" name="answer30" value="2" required> Involve listening to music, conversations, or discussions</label>
+                    <label><input type="radio" name="answer30" value="3" required> Involve playing sports, dancing, or building something</label>
+                </div>
+            </div>
+
+            <!-- Add more questions as needed -->
+        </form>
+    </div>
+</div>
+              <!-- Submit Button -->
+                <button class="submit-button" type="button" onclick="saveAnswers()">Submit and View Results</button>
+
+
+            <!-- Home Button -->
+
+            <div class="home-button">
+                <a href="#home" title="Home">
+                    <div class="icon-house" onclick="window.location.href='index.html'"></div>
+                    <span>Home</span>
+                </a>
+            </div>
+
+            <!--
+                <button class="button1" onclick="window.location.href='index.html'">Home</button>
+-->
+
+    <script src="script.js"></script> <!-- Link to your JavaScript -->
+</body>
+</html>
