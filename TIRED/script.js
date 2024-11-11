@@ -235,12 +235,15 @@ document.addEventListener("DOMContentLoaded", function() {
     function createShape() {
         const shape = document.createElement("div");
         shape.classList.add("falling-shape");
+        
+        // Randomly assign one of the two images (img1 or img2)
+        const randomImageClass = Math.random() > 0.5 ? 'img1' : 'img2';
+        shape.classList.add(randomImageClass);
       
         // Random size, position, and fall duration for each shape
-        const size = Math.random() * 20 + 10; // Random base size between 10px and 30px
-        shape.style.borderLeftWidth = `${size / 2}px`;
-        shape.style.borderRightWidth = `${size / 2}px`;
-        shape.style.borderBottomWidth = `${size * 0.866}px`; // Equilateral triangle height
+        const size = Math.random() * 40 + 30; // Increased size range to between 30px and 70px
+        shape.style.width = `${size}px`;
+        shape.style.height = `${size}px`;
       
         shape.style.left = Math.random() * 100 + "vw"; // Random horizontal position
         shape.style.animationDuration = Math.random() * 5 + 5 + "s"; // Random fall speed between 5s and 10s
@@ -249,18 +252,20 @@ document.addEventListener("DOMContentLoaded", function() {
       
         // Remove shape once animation completes
         shape.addEventListener("animationend", function() {
-          shapesContainer.removeChild(shape);
-          createShape(); // Continuously create new shapes for an infinite effect
+            shapesContainer.removeChild(shape);
+            createShape(); // Continuously create new shapes for an infinite effect
         });
-      }
+    }
   
     // Generate multiple shapes at once for a dense effect
     for (let i = 0; i < 20; i++) {
-      createShape();
+        createShape();
     }
-  });
-``
-  
+});
+
+
+
+
 // Function to toggle the sidebar and button visibility
 function toggleMenu() {
     const sidebar = document.getElementById("navSidebar");
@@ -290,3 +295,4 @@ function closeMenu() {
     menuButton.style.display = "block"; // Show the menu button
     closeButton.style.display = "none"; // Hide the close button
 }
+

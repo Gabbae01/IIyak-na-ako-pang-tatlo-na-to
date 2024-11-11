@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     background-color: #b2cbde;
-    background: #b2cbde, #2a52be; /* Use proper shorthand */
+
     margin: 0; /* Removes default margin */
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@ body {
 .shesh {
     padding: 10px;
     border: 2px outset white;
-    background-color: #98bad5;
+    background-color: #99C2C7;
     width: 100%;
     max-width: 600px; /* Reduced width for better fit */
     height: 100px; /* Removed fixed height to allow content to adjust */
@@ -27,7 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px; /* Reduced font size for better fit */
+    font-size: 60px; /* Reduced font size for better fit */
     text-align: center; /* Center text inside the box */
     box-sizing: border-box; /* Ensure padding is included in total width/height */
 
@@ -69,10 +69,10 @@ p {
     margin: 10px auto;
     padding: 10px;
     border: 2px outset black;
-    background-color: #98bad5;
+    background-color: #99C2C7;
     border-radius: 10px;
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     box-sizing: border-box;
     margin-right: 200px;
 }
@@ -112,7 +112,7 @@ p {
 /* Remove excessive padding and margin in h2 */
 .shesh1 h2 {
     font-size: 30px; /* Adjust font size as needed */
-    margin: 0;
+    margin: 10px;
     padding: 10px 0; /* Reduced top and bottom padding */
     text-align: center;
 }
@@ -131,7 +131,7 @@ html, body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin-top: -200px;
+    margin-top: -250px;
 }
 
 /* Question Block Styles */
@@ -139,7 +139,7 @@ html, body {
     margin: 20px auto;
     padding: 10px;
     border: 2px outset black;
-    background-color: #98bad5;
+    background-color: #99C2C7;
     border-radius: 10px;
     width: 100%;
     max-width: 600px;
@@ -164,7 +164,7 @@ html, body {
         margin: 15px auto;
         padding: 15px;
         width: 90%;
-        margin-top: -10px;
+        margin-top: 20px;
     }
 
     .question-block1 label {
@@ -176,7 +176,7 @@ html, body {
         font-size: 30px; /* Adjust font size as needed */
         margin-top: -12px;
         text-align: center;
-        margin-bottom: -0px;
+        margin-bottom: -80px;
     }
     /* Parent container for centering */
     .parent-container {
@@ -297,7 +297,7 @@ button:hover {
     display: flex;
     justify-content: center;
     border: 2px outset white;
-    background-color: #98bad5;
+    background-color: #99C2C7;
     align-items: center;
     width: 100%;
     max-width: 1200px;
@@ -315,6 +315,7 @@ button:hover {
 
 .fat h2 {
     font-size: 100px; /* Font size for the heading */
+    letter-spacing: 10px;
 }
 
 /* Media Query for Mobile Devices */
@@ -337,7 +338,7 @@ button:hover {
     height: 50px;
     margin-bottom: 10px;
     border: 2px outset black;
-    background-color: #98bad5;
+    background-color: #99C2C7;
     color: black;
     flex-direction: row;
 }
@@ -346,7 +347,7 @@ button:hover {
     color: white;
     border: 2px outset white;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #98bad5;
+    background-color: #99C2C7;
     width: 100%; /* Full width by default */
     max-width: 1300px; /* Maximum width */
     height: 400px; /* Default height for larger screens */
@@ -371,10 +372,11 @@ button:hover {
 }
 
 .ewan h1 {
-    color: black;
+    color: white;
 }
 
 .ewan p {
+    color: white;
     font-size: 25px; /* Adjust description font size */
     line-height: 1.5; /* Improve readability */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -406,6 +408,7 @@ button:hover {
     }
 
     .ewan p {
+        color: white;
         font-size: 20px;         /* Adjust paragraph size for mobile */
     }
 
@@ -425,7 +428,7 @@ button:hover {
 /* Burat classes (No changes) */
  .shesh {
     border: 2px outset white;
-    background-color: #7ab7d6;
+    background-color: #99C2C7;
     border-radius: 10px;
     color: white;
     text-align: center;
@@ -445,7 +448,7 @@ button:hover {
     height: 25px;
     font-size: 18px;
     border-radius: 10px;
-    background-color: #7ab7d6;
+    background-color: #99C2C7;
     margin-top: 80px;
     text-align: center;
     color: black;
@@ -456,7 +459,7 @@ button:hover {
     border: 2px outset black;
     padding: 15px;
     margin: 10px;
-    background-color: #7ab7d6;
+    background-color: #99C2C7;
     border-radius: 8px;
     text-align: center;
     font-size: 18px;
@@ -473,7 +476,7 @@ button:hover {
     border: 2px outset black;
     padding: 15px;
     margin: 10px;
-    background-color: #7ab7d6;
+    background-color: #99C2C7;
     border-radius: 8px;
     text-align: center;
     font-size: 30px;
@@ -495,7 +498,7 @@ button:hover {
     padding-left: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
-    background-color: #7ab7d6;
+    background-color: #99C2C7;
     border-radius: 8px;
     font-size: 18px;
     color: black;
@@ -782,7 +785,7 @@ img{
 .burat1, .burat2, .burat3 {
     color: white;
     border: 2px outset white;
-    background-color: #98bad5;
+    background-color: #99C2C7;
     width: 350px;             /* Width of each box */
     height: 750px;            /* Height of each box */
     display: flex;
@@ -824,7 +827,7 @@ img{
     border: 2px outset black;
     padding: 15px;
     margin-top: 20px;
-    background-color: #7ab7d6;
+    background-color: #99C2C7;
     border-radius: 8px;
     text-align: left;
     font-size: 30px; /* Adjusted font-size */
@@ -924,7 +927,7 @@ img{
 .kinesthetic-tip1, .kinesthetic-tip2, .kinesthetic-tip3, .kinesthetic-tip4, .kinesthetic-tip5,
 .kinesthetic-tip6, .kinesthetic-tip7, .kinesthetic-tip8, .kinesthetic-tip9, .kinesthetic-tip10, .kinesthetic-tip11 {
     color: white;
-    background-color: #7ab7d6;
+    background-color: #99C2C7;
     padding: 8px;
     border-radius: 8px;
     max-width: 100%;  /* Ensure the image is responsive */
@@ -943,32 +946,47 @@ img{
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Shapes won't interfere with clicks */
+    pointer-events: none;
     overflow: hidden;
-    z-index: -1; /* Places shapes behind all content */
+    z-index: -1;
 }
 
-/* Shape styling - Use your own image */
+/* Shape styling - Common properties */
 .falling-shape {
     position: absolute;
-    width: 30px; /* Set the width of your image */
-    height: 30px; /* Set the height of your image */
-    background-image: url('snow-flake.1024-removebg-preview.png'); /* Replace with your image path */
-    background-size: contain; /* Ensure the image is scaled correctly */
-    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-size: contain;
+    background-repeat: no-repeat;
     animation: fall linear infinite;
     opacity: 1;
+}
+
+/* Image 1 (e.g., snowflake) */
+.falling-shape.img1 {
+    background-image: url('snow-flake.1024-removebg-preview.png'); /* Replace with your first image path */
+}
+
+/* Image 2 (e.g., another shape) */
+.falling-shape.img2 {
+    background-image: url('kisspng-gingerbread-man-clip-art-removebg-preview.png'); /* Replace with your second image path */
 }
 
 /* Falling animation */
 @keyframes fall {
     0% {
-        transform: translateY(-100vh) rotate(0deg); /* Start above the viewport and upright */
+        transform: translateY(-100vh) rotate(0deg);
     }
     100% {
-        transform: translateY(100vh) rotate(360deg); /* End below the viewport with rotation */
+        transform: translateY(100vh) rotate(360deg);
     }
 }
+
+
+
+
+
+
+
+
 
 
 /* Sidebar styles */
@@ -1086,108 +1104,3 @@ img{
     margin-right: 8px;
   }
 
-  /* General Styles */
-body {
-    background-color: #b2cbde;
-    background: (#b2cbde, #2a52be);
-    margin: 0; /* Removed duplicate margin */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow-x: hidden; /* Prevent horizontal overflow */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
-
-.shesh {
-    padding: 10px;
-    border: 2px outset white;
-    background-color: #98bad5;
-    width: 100%;
-    max-width: 90%; /* Adjust width for mobile */
-    height: auto;
-    border-radius: 10px;
-    border: 2.5px outset black;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.background-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
-h1 {
-    color: white;
-    font-size: 36px;
-    text-align: center;
-}
-
-p {
-    color: black;
-    font-size: 18px; /* Adjusted font size for better readability */
-    margin: 10px auto;
-    text-align: left;
-    padding: 10px;
-}
-
-/* Questionnaire Container */
-.questionnaire {
-    width: 100%;
-    max-width: 600px;
-    margin: 0;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Question Block Styles */
-.question-block {
-    margin: 10px auto;
-    padding: 10px;
-    border: 2px outset black;
-    background-color: #98bad5;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 600px;
-    box-sizing: border-box;
-}
-
-/* Options Styles */
-.options label {
-    display: block;
-    margin: 5px auto;
-    font-size: 16px;
-}
-
-.shesh1 {
-    padding: 10px;
-    border: 2px outset white;
-    background-color: #98bad5;
-    width: 100%;
-    max-width: 90%;
-    height: 100px;
-    border-radius: 10px;
-    border: 2.5px outset black;
-    margin-top: 20px;
-    font-size: 30px;
-    text-align: center;
-    gap: 15px;
-}
-
-.shesh1 h2 {
-    font-size: 50px;
-    padding-top: 10px;
-    padding-bottom: 70px;
-    text-align: center;
-}
