@@ -159,7 +159,7 @@ html, body {
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .question-block1 {
         margin: 15px auto;
         padding: 15px;
@@ -319,7 +319,7 @@ button:hover {
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 780px) {
+@media (max-width: 768px) {
     .fat {
         margin-top: 70px;
         font-size: 150px; /* Reduce font size on mobile */
@@ -369,6 +369,8 @@ button:hover {
     font-weight: bold;
     margin-bottom: 10px; /* Space between title and description */
     margin-top: -16;
+    align-items: center;
+    justify-content: center;
 }
 
 .ewan h1 {
@@ -965,9 +967,14 @@ img{
     background-image: url('snow-flake.1024-removebg-preview.png'); /* Replace with your first image path */
 }
 
-/* Image 2 (e.g., another shape) */
+/* Image 2 (e.g., gingerbread man) */
 .falling-shape.img2 {
     background-image: url('kisspng-gingerbread-man-clip-art-removebg-preview.png'); /* Replace with your second image path */
+}
+
+/* Image 3 (e.g., third shape) */
+.falling-shape.img3 {
+    background-image: url('275755-removebg-preview.png'); /* Replace with your third image path */
 }
 
 /* Falling animation */
@@ -979,11 +986,6 @@ img{
         transform: translateY(100vh) rotate(360deg);
     }
 }
-
-
-
-
-
 
 
 

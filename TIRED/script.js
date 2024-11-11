@@ -236,8 +236,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const shape = document.createElement("div");
         shape.classList.add("falling-shape");
         
-        // Randomly assign one of the two images (img1 or img2)
-        const randomImageClass = Math.random() > 0.5 ? 'img1' : 'img2';
+        // Randomly assign one of the three images (img1, img2, or img3)
+        const randomImageClass = ['img1', 'img2', 'img3'][Math.floor(Math.random() * 3)];
         shape.classList.add(randomImageClass);
       
         // Random size, position, and fall duration for each shape
@@ -262,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function() {
         createShape();
     }
 });
+
 
 
 
