@@ -252,12 +252,15 @@ document.addEventListener("DOMContentLoaded", function() {
     function createShape() {
         const shape = document.createElement("div");
         shape.classList.add("falling-shape");
+        
+        // Randomly assign one of the three images (img1, img2, or img3)
+        const randomImageClass = ['img1', 'img2', 'img3'][Math.floor(Math.random() * 3)];
+        shape.classList.add(randomImageClass);
       
         // Random size, position, and fall duration for each shape
-        const size = Math.random() * 20 + 10; // Random base size between 10px and 30px
-        shape.style.borderLeftWidth = `${size / 2}px`;
-        shape.style.borderRightWidth = `${size / 2}px`;
-        shape.style.borderBottomWidth = `${size * 0.866}px`; // Equilateral triangle height
+        const size = Math.random() * 40 + 30; // Increased size range to between 30px and 70px
+        shape.style.width = `${size}px`;
+        shape.style.height = `${size}px`;
       
         shape.style.left = Math.random() * 100 + "vw"; // Random horizontal position
         shape.style.animationDuration = Math.random() * 5 + 5 + "s"; // Random fall speed between 5s and 10s
@@ -266,52 +269,63 @@ document.addEventListener("DOMContentLoaded", function() {
       
         // Remove shape once animation completes
         shape.addEventListener("animationend", function() {
-          shapesContainer.removeChild(shape);
-          createShape(); // Continuously create new shapes for an infinite effect
+            shapesContainer.removeChild(shape);
+            createShape(); // Continuously create new shapes for an infinite effect
         });
-      }
+    }
   
     // Generate multiple shapes at once for a dense effect
     for (let i = 0; i < 20; i++) {
-      createShape();
+        createShape();
     }
-  });
-``
+});
 
 </script>
 
 <style>
-    /* Falling shapes container */
+/* Falling shapes container */
 .falling-shapes-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Shapes won't interfere with clicks */
+    pointer-events: none;
     overflow: hidden;
-    z-index: -1; /* Places shapes behind all content */
+    z-index: -1;
 }
 
-/* Shape styling - Use your own image */
+/* Shape styling - Common properties */
 .falling-shape {
     position: absolute;
-    width: 30px; /* Set the width of your image */
-    height: 30px; /* Set the height of your image */
-    background-image: url('snow-flake.1024-removebg-preview.png'); /* Replace with your image path */
-    background-size: contain; /* Ensure the image is scaled correctly */
-    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-size: contain;
+    background-repeat: no-repeat;
     animation: fall linear infinite;
     opacity: 1;
+}
+
+/* Image 1 (e.g., snowflake) */
+.falling-shape.img1 {
+    background-image: url('snow-flake.1024-removebg-preview.png'); /* Replace with your first image path */
+}
+
+/* Image 2 (e.g., gingerbread man) */
+.falling-shape.img2 {
+    background-image: url('kisspng-gingerbread-man-clip-art-removebg-preview.png'); /* Replace with your second image path */
+}
+
+/* Image 3 (e.g., third shape) */
+.falling-shape.img3 {
+    background-image: url('275755-removebg-preview.png'); /* Replace with your third image path */
 }
 
 /* Falling animation */
 @keyframes fall {
     0% {
-        transform: translateY(-100vh) rotate(0deg); /* Start above the viewport and upright */
+        transform: translateY(-100vh) rotate(0deg);
     }
     100% {
-        transform: translateY(100vh) rotate(360deg); /* End below the viewport with rotation */
+        transform: translateY(100vh) rotate(360deg);
     }
 }
 </style>
